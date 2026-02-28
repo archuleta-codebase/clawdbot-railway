@@ -49,8 +49,10 @@ RUN apt-get update \
     tini \
     python3 \
     python3-venv \
+    ffmpag \
   && rm -rf /var/lib/apt/lists/*
 
+RUN npx playwright install --with-deps chromium
 # `openclaw update` expects pnpm. Provide it in the runtime image.
 RUN corepack enable && corepack prepare pnpm@10.23.0 --activate
 
