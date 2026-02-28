@@ -49,7 +49,7 @@ RUN apt-get update \
     tini \
     python3 \
     python3-venv \
-    ffmpag \
+    ffmpeg \
   && rm -rf /var/lib/apt/lists/*
 
 RUN npx playwright install --with-deps chromium
